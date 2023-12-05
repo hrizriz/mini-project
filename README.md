@@ -4,11 +4,13 @@
 ## Prerequisites
 
 Prerequisites: 
-  1. Account Google Colab or Jupyter Notebook
-  2. Python & Virtual Environment
-  3. Run postgresql & airbyte with docker-compose
-  4. Manage postgresql with DBeaver
-  5. Account Google Cloud Platform
+  1. Google Colab or Jupyter Notebook account
+  2. Python & Virtual Environment setup
+  3. DBT setup & run
+  4. PostgreSQL & Airbyte setup & run with Docker-compose
+  5. PostgreSQL management with DBeaver
+  6. Airbyte setup to ingest data from PostgreSQL to BigQuery
+  7. Google Cloud Platform account connected to BigQuery
 
 ### Python & Virtual Environment
 
