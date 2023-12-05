@@ -326,7 +326,7 @@ services:
   #############################################################################
 
   postgre:
-    container_name: "${COMPOSE_PROJECT_NAME:-postgre}"
+    container_name: "Postgres"
     image: "postgres:12.16"
     ports:
       - "5432:5432"
