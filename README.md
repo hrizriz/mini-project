@@ -49,7 +49,7 @@ To run Postgres with docker-compose we will create a [docker-compose.yml](/docke
 To start the containers, run this command: 
 
 ```bash
-    cd docker
+    cd airbyte
 ```
 
 ```bash
@@ -69,18 +69,6 @@ To start the containers, run this command:
     - Password: pass
     - DB: covid19
 ```
-
-## Setup Connection in Airbyte
-
-- Open the Airbyte dashboard on [http://localhost:8000/](http://localhost:8000/) in browser, login with 
-```bash
-    - Username: airbyte
-    - Password: password
-```
-
-- Then, create connection
-
-    ![image-1](./img/airbyte_conn.png)
 ## Ingestion Data to PostgreSQL
 - In this step, I perform Data Wrangling. You can check the code [here](data_wrangling.ipynb). I use Google Colab for this task.
 - We have a large number of libraries need to be installed, we can install all the packages at once by using the [requirements.txt](/requirements.txt) file. The syntax would be:
@@ -497,4 +485,45 @@ dbt run
 dbt test
 ```
 To see what kind of test you can pefrom, you can visit dbt_utils documentation: https://github.com/dbt-labs/dbt-utils
+
+## Setup Connection in Airbyte
+
+- Open the Airbyte dashboard on [http://localhost:8000/](http://localhost:8000/) in browser, login with 
+```bash
+    - Username: airbyte
+    - Password: password
+```
+
+- Then, create connection
+
+    ![image-1](./img/airbyte_conn.png)
+
+## Ingest from Postgresql to Google BigQuery
+We will ingest data from PostgreSQL, which has already undergone data wrangling and data modeling using dbt, into Google BigQuery.
+
+- Define Source
+    
+  Fill in the sources attributes ![image](./img/airbyte_sources.png)
+  ```bash
+      - Host: localhost
+      - Port: 5432
+      - Username: postgres
+      - Password: pass
+      - DB: covid19
+  ```
+- Define Destinations
+
+  Fill in the destinations attributes 
+  ![image](./img/airbyte_destinations.png)
+
+  Configure connections
+  ![image](./img/airbyte_connections.png)
+
+- Start synchronizing data
+  ![image](./img/airbyte_sync.png)
+
+- Synchronizing status success
+  ![image](./img/airbyte_sync_success.png)
+- Data has been successfully loaded into BigQuery
+  ![image](./img/load_to_bigquery.png)
 
