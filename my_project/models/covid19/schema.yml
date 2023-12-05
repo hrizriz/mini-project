@@ -1,0 +1,154 @@
+version: 2
+
+sources:
+  - name: covid19
+    database: covid19
+    schema: public
+
+    tables:
+      - name: covid_indonesia
+        columns:
+          - name: date
+            description: "Date of the record"
+            tests:
+              - not_null
+          - name: location_iso_code
+            description: "ISO code of the location"
+            tests:
+              - not_null
+          - name: location
+            description: "Name of the location"
+            tests:
+              - not_null
+          - name: new_cases
+            description: "Number of new cases"
+            tests:
+              - not_null
+          - name: new_deaths
+            description: "Number of new deaths"
+            tests:
+              - not_null
+          - name: new_recovered
+            description: "Number of new recoveries"
+            tests:
+              - not_null
+          - name: new_active_cases
+            description: "Number of new active cases"
+            tests:
+              - not_null
+          - name: total_cases
+            description: "Total number of cases"
+            tests:
+              - not_null
+          - name: total_deaths
+            description: "Total number of deaths"
+            tests:
+              - not_null
+          - name: total_recovered
+            description: "Total number of recoveries"
+            tests:
+              - not_null
+          - name: total_active_cases
+            description: "Total number of active cases"
+            tests:
+              - not_null
+          - name: location_level
+            description: "Level of the location"
+            tests:
+              - not_null
+          - name: province
+            description: "Province of the location"
+            tests:
+              - not_null
+          - name: country
+            description: "Country of the location"
+            tests:
+              - not_null
+          - name: continent
+            description: "Continent of the location"
+            tests:
+              - not_null
+          - name: island
+            description: "Island of the location"
+            tests:
+              - not_null
+          - name: time_zone
+            description: "Time zone of the location"
+            tests:
+              - not_null
+          - name: total_regencies
+            description: "Total number of regencies in the location"
+            tests:
+              - not_null
+          - name: total_cities
+            description: "Total number of cities in the location"
+            tests:
+              - not_null
+          - name: total_districts
+            description: "Total number of districts in the location"
+            tests:
+              - not_null
+          - name: total_urban_villages
+            description: "Total number of urban villages in the location"
+            tests:
+              - not_null
+          - name: total_rural_villages
+            description: "Total number of rural villages in the location"
+            tests:
+              - not_null
+          - name: area_km2
+            description: "Area of the location in square kilometers"
+            tests:
+              - not_null
+          - name: population
+            description: "Population of the location"
+            tests:
+              - not_null
+          - name: population_density
+            description: "Population density of the location"
+            tests:
+              - not_null
+          - name: longitude
+            description: "Longitude of the location"
+            tests:
+              - not_null
+          - name: latitude
+            description: "Latitude of the location"
+            tests:
+              - not_null
+          - name: new_cases_per_million
+            description: "Number of new cases per million people"
+            tests:
+              - not_null
+          - name: total_cases_per_million
+            description: "Total number of cases per million people"
+            tests:
+              - not_null
+          - name: new_deaths_per_million
+            description: "Number of new deaths per million people"
+            tests:
+              - not_null
+          - name: total_deaths_per_million
+            description: "Total number of deaths per million people"
+            tests:
+              - not_null
+          - name: total_deaths_per_100rb
+            description: "Total number of deaths per 100,000 people"
+            tests:
+              - not_null
+          - name: case_fatality_rate
+            description: "Case fatality rate"
+            tests:
+              - not_null
+          - name: case_recovered_rate
+            description: "Case recovery rate"
+            tests:
+              - not_null
+          - name: growth_factor_of_new_cases
+            description: "Growth factor of new cases"
+            tests:
+              - not_null
+          - name: growth_factor_of_new_deaths
+            description: "Growth factor of new deaths"
+            tests:
+              - not_null

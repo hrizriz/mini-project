@@ -1,0 +1,115 @@
+version: 2
+
+models:
+  - name: daily_trends
+    description: Model that shows the daily trend of new cases, new deaths, and new recoveries
+    columns:
+      - name: date
+        description: Date of the record
+        tests:
+          - not_null
+      - name: daily_new_cases
+        description: Number of new cases on the date
+        tests:
+          - not_null
+      - name: daily_new_deaths
+        description: Number of new deaths on the date
+        tests:
+          - not_null
+      - name: daily_new_recoveries
+        description: Number of new recoveries on the date
+        tests:
+          - not_null
+      - name: previous_day_new_cases
+        description: Number of new cases on the previous day
+      - name: previous_day_new_deaths
+        description: Number of new deaths on the previous day
+      - name: previous_day_new_recoveries
+        description: Number of new recoveries on the previous day
+
+
+  - name: demographic_analysis
+    description: Model that shows the impact of population density on the spread of COVID-19
+    columns:
+      - name: date
+        description: Date of the record
+        tests:
+          - not_null
+      - name: location
+        description: Name of the location
+        tests:
+          - not_null
+      - name: population
+        description: Population of the location
+        tests:
+          - not_null
+      - name: population_density
+        description: Population density of the location
+        tests:
+          - not_null
+      - name: total_cases
+        description: Total number of cases on the date
+        tests:
+          - not_null
+      - name: total_deaths
+        description: Total number of deaths on the date
+        tests:
+          - not_null
+      - name: total_recoveries
+        description: Total number of recoveries on the date
+        tests:
+          - not_null
+      - name: cases_per_million
+        description: Number of cases per million people on the date
+        tests:
+          - not_null
+      - name: deaths_per_million
+        description: Number of deaths per million people on the date
+        tests:
+          - not_null
+      - name: recoveries_per_million
+        description: Number of recoveries per million people on the date
+        tests:
+          - not_null
+      
+  - name: geographic_analysis
+    description: Model that shows the spread of COVID-19 across different locations and regions
+    columns:
+      - name: date
+        description: Date of the record
+        tests:
+          - not_null
+      - name: location
+        description: Name of the location
+        tests:
+          - not_null
+      - name: province
+        description: Province of the location
+        tests:
+          - not_null
+      - name: country
+        description: Country of the location
+        tests:
+          - not_null
+      - name: continent
+        description: Continent of the location
+        tests:
+          - not_null
+      - name: island
+        description: Island of the location
+        tests:
+          - not_null
+      - name: total_cases
+        description: Total number of cases on the date
+        tests:
+          - not_null
+      - name: total_deaths
+        description: Total number of deaths on the date
+        tests:
+          - not_null
+      - name: total_recoveries
+        description: Total number of recoveries on the date
+        tests:
+          - not_null
+
+
