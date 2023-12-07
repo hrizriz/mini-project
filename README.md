@@ -55,7 +55,7 @@ To start the containers, run this command:
 ```
 
 ```bash
-    docker-compose -f docker-compose.yml -d 
+    docker-compose -f docker-compose.yml up -d 
 ```
 
 ## Manage postgresql with DBeaver
