@@ -4,7 +4,7 @@
 ## Prerequisites
 
 Prerequisites: 
-  1. Google Colab or Jupyter Notebook account
+  1. Google Colab
   2. Python & Virtual Environment setup
   3. DBT setup & run
   4. PostgreSQL & Airbyte setup & run with Docker-compose
